@@ -1,1 +1,2 @@
 # celynasu
+personal portfolio project
