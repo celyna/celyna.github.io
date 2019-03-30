@@ -1,347 +1,185 @@
-<!DOCTYPE html>
-<html>
-<script type="text/javascript">
-// <![CDATA[
-var colour="#ff00f0";
-var sparkles=120;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
+    <title>NETWORK</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <!---
+   
+    HERE'S MY CARD
+    a minimalist about me page
+   
+    design 2/3
+   
+    º ciralism º
+   
+    ---->
+   
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+<style type="text/css">
 
-/****************************
-*  Tinkerbell Magic Sparkle *
-* (c) 2005 mf2fm web-design *
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
-
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
-
-function sparkle() {
-  var c;
-  if (x!=ox || y!=oy) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
+/* BASICS */
+    body {background-color:#f3f3f3;font-family:Lato;color:#000;font-size:11px;font-weight:300; background-image: url("https://drscdn.500px.org/photo/129053945/q%3D80_m%3D2000/v2?webp=true&sig=13accb695d4e09c6d0cb3bd075288746943a4249304ff0330924e2c2fe91b94a");background-position: bottom; background-position:70% 20%;
+}
+    a {color:#000;text-decoration:none;-webkit-transition-duration:600ms;-o-transition-duration:600ms;-moz-transition-duration:600ms;-ms-transition-duration:600ms;}
+    a:hover, a:active {color:#94b1cc;border-bottom-color:#94b1cc;}
+    b, em {font-weight:bold;color:#94b1cc;}
+    h1 {padding-bottom:1px;margin:0;}
+    .credit {position:absolute;text-transform:uppercase;font-size:10px;font-weight:normal;right:5px;bottom:6px;letter-spacing:1px;}
+ 
+    .card {
+        width:400px;
+        height:100px;
+        background-color:transparent;
+        position:fixed;
+        left:25%;
+        top:20%;
+        margin-left:175px;margin-top:130px;
+        padding:20px;
+        text-align:center;
+        border-top:10px #ccc;
     }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
+   
+    .name {text-transform:uppercase;font-size:15px;letter-spacing:3px;font-weight:bold;margin-top:45px;font-family:Didot;}
+   
+    .title {font-family:Didot;font-style:italic;padding-top:5px;}
+   
+    .company {text-transform:uppercase;font-weight:lighter!important;font-size:8px;letter-spacing:2px;padding-top:5px;}
+   
+    .links {position:absolute;margin-top:20px;width:400px;height:60px;text-transform:uppercase;font-size:8.5px;letter-spacing:1px;text-align:center!important;}
+    .links a {margin-right:10px;}
+    
+   
 
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      starx[i]+=(i%5-2)/5;
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
+    
+/* Icon Sink Away */
+@-webkit-keyframes hvr-icon-sink-away {
+  0% {
+    opacity: 1;
   }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
   }
 }
-
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
+@keyframes hvr-icon-sink-away {
+  0% {
+    opacity: 1;
   }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
-
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
   }
 }
+/* Icon Sink Away */
+.hvr-icon-sink-away {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-sink-away .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.hvr-icon-sink-away:hover .hvr-icon, .hvr-icon-sink-away:focus .hvr-icon, .hvr-icon-sink-away:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-sink-away;
+  animation-name: hvr-icon-sink-away;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+    
+/* HP Bars */
 
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
+    .sleep {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:60%;left:37%;background-color:#000;width:60px;height:1px;z-index:9999999999;-webkit-transition: 2s ease-out;
+  -moz-transition: 2s ease-out;
+  -o-transition: 2s ease-out;
+  transition: 2s ease-out;}
+    .sleep:hover {width:180px; -webkit-transition: 2s ease-out;
+  -moz-transition: 2s ease-out;
+  -o-transition: 2s ease-out;
+  transition: 2s ease-out;}
+    
+    .totsleep {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:60%;left:37%;background-color:#bbb;width:180px;height:1px;z-index:99999999;}
+    
+    .deets {position:fixed;left:37%;top:50%;margin-top:70px;width:100px;height:50px;vertical-align:bottom;text-transform:uppercase;font-size:7px;letter-spacing:1px;text-align:left!important;z-index:999999999;}
+   
+    .deets a {display:block;margin-top:7px;}
+    
+    .programming {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:60%;left:55%;background-color:#000;width:150px;height:1px;z-index:9999999999;-webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;}
+    .programming:hover {width:180px; -webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;}
+    
+    .totprogram {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:60%;left:55%;background-color:#bbb;width:180px;height:1px;z-index:99999999;}
+    
+    .deets1 {position:fixed;left:55%;top:50%;margin-top:70px;width:100px;height:50px;vertical-align:bottom;text-transform:uppercase;font-size:7px;letter-spacing:1px;text-align:left!important;z-index:999999999;}
+   
+    .deets1 a {display:block;margin-top:7px;}
+    
+/* Tooltip */
+ 
+.ui-tooltip {  
+    position:Absolute;
+    z-index:999999999;
+    padding-top:15px;
+}
+ 
+.ui-tooltip-content {
+    background:#ffffff;
+    padding:2px 5px;
+    font-family:calibri,arial,sans-serif;
+    border:1px solid #eeeeee;
+    font-size:8px;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-// ]]>
-</script>
-<script type="text/javascript">
-// <![CDATA[
-var bits=80; // how many bits
-var speed=33; // how fast - smaller is faster
-var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
-var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c"); 
-//                     blue    red     green   purple  cyan    orange  pink
+/* Highlight */
 
-/****************************
-*      Fireworks Effect     *
-*(c)2004-14 mf2fm web-design*
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var bangheight=new Array();
-var intensity=new Array();
-var colour=new Array();
-var Xpos=new Array();
-var Ypos=new Array();
-var dX=new Array();
-var dY=new Array();
-var stars=new Array();
-var decay=new Array();
-var swide=800;
-var shigh=600;
-var boddie;
-
-if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
-  var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
-    if (oldonload) oldonload();
-    funky();
-  }
-}
-
-addRVLoadEvent(light_blue_touchpaper);
-
-function light_blue_touchpaper() { if (document.getElementById) {
-  var i;
-  boddie=document.createElement("div");
-  boddie.style.position="fixed";
-  boddie.style.top="0px";
-  boddie.style.left="0px";
-  boddie.style.overflow="visible";
-  boddie.style.width="1px";
-  boddie.style.height="1px";
-  boddie.style.backgroundColor="transparent";
-  document.body.appendChild(boddie);
-  set_width();
-  for (i=0; i<bangs; i++) {
-    write_fire(i);
-    launch(i);
-    setInterval('stepthrough('+i+')', speed);
-  }
-}}
-
-function write_fire(N) {
-  var i, rlef, rdow;
-  stars[N+'r']=createDiv('|', 12);
-  boddie.appendChild(stars[N+'r']);
-  for (i=bits*N; i<bits+bits*N; i++) {
-    stars[i]=createDiv('*', 13);
-    boddie.appendChild(stars[i]);
-  }
-}
-
-function createDiv(char, size) {
-  var div=document.createElement("div");
-  div.style.font=size+"px monospace";
-  div.style.position="absolute";
-  div.style.backgroundColor="transparent";
-  div.appendChild(document.createTextNode(char));
-  return (div);
-}
-
-function launch(N) {
-  colour[N]=Math.floor(Math.random()*colours.length);
-  Xpos[N+"r"]=swide*0.5;
-  Ypos[N+"r"]=shigh-5;
-  bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
-  dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
-  if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
-  else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
-  else stars[N+"r"].firstChild.nodeValue="|";
-  stars[N+"r"].style.color=colours[colour[N]];
-}
-
-function bang(N) {
-  var i, Z, A=0;
-  for (i=bits*N; i<bits+bits*N; i++) { 
-    Z=stars[i].style;
-    Z.left=Xpos[i]+"px";
-    Z.top=Ypos[i]+"px";
-    if (decay[i]) decay[i]--;
-    else A++;
-    if (decay[i]==15) Z.fontSize="7px";
-    else if (decay[i]==7) Z.fontSize="2px";
-    else if (decay[i]==1) Z.visibility="hidden";
-	if (decay[i]>1 && Math.random()<.1) {
-	   Z.visibility="hidden";
-	   setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
-	}
-    Xpos[i]+=dX[i];
-    Ypos[i]+=(dY[i]+=1.25/intensity[N]);
-
-  }
-  if (A!=bits) setTimeout("bang("+N+")", speed);
-}
-
-function stepthrough(N) { 
-  var i, M, Z;
-  var oldx=Xpos[N+"r"];
-  var oldy=Ypos[N+"r"];
-  Xpos[N+"r"]+=dX[N+"r"];
-  Ypos[N+"r"]-=4;
-  if (Ypos[N+"r"]<bangheight[N]) {
-    M=Math.floor(Math.random()*3*colours.length);
-    intensity[N]=5+Math.random()*4;
-    for (i=N*bits; i<bits+bits*N; i++) {
-      Xpos[i]=Xpos[N+"r"];
-      Ypos[i]=Ypos[N+"r"];
-      dY[i]=(Math.random()-0.5)*intensity[N];
-      dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
-      decay[i]=16+Math.floor(Math.random()*16);
-      Z=stars[i];
-      if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
-      else if (M<2*colours.length) Z.style.color=colours[colour[N]];
-      else Z.style.color=colours[i%colours.length];
-      Z.style.fontSize="13px";
-      Z.style.visibility="visible";
-    }
-    bang(N);
-    launch(N);
-  }
-  stars[N+"r"].style.left=oldx+"px";
-  stars[N+"r"].style.top=oldy+"px";
-} 
-
-window.onresize=set_width;
-function set_width() {
-  var sw_min=999999;
-  var sh_min=999999;
-  if (document.documentElement && document.documentElement.clientWidth) {
-    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-  }
-  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
-    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-  }
-  if (document.body.clientWidth) {
-    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-  }
-  if (sw_min==999999 || sh_min==999999) {
-    sw_min=800;
-    sh_min=600;
-  }
-  swide=sw_min;
-  shigh=sh_min;
-}
-// ]]>
-</script>
-
-
+::selection {color: #101010;}
+::-moz-selection {color: #101010;}
+ 
+ 
+</style>
+</head>
 <body>
-	<iframe width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/430024410&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> <br>
+<div class="deets">Sleep (in progress)</div>
+<div class="sleep"></div>
+<div class="totsleep"></div>
 
-	<a style="margin-left:50%; margin-bottom:50%"><img src="https://ih0.redbubble.net/image.545888818.5903/ap,550x550,12x12,1,transparent,t.u4.png"></a>
-</body>
+<div class="deets1">Programming</div>
+<div class="programming"></div>
+<div class="totprogram"></div>
 
-
-</html>
+    <div class="card">
+        <div class="name">Celyna Cara Su</div>
+        <div class="title">Computer Science and Business Applications</div>
+        <div class="company">University of California, Riverside</div>
+        
+        <div class="links">
+            <a href="https://github.com/celyna" class="hvr-icon-sink-away" ><i class="fab fa-github"></i></a>
+            <a href="mailto:csu018@ucr.edu" title = "email: csu018@ucr.edu"><i class="fa fa-envelope"></i> </a>
+            <a href="/"><i class="fab fa-linkedin"></i> </a> 
+            <a href="/"><i class="fa fa-crop"></i> </a>
+            <a href="/"><i class="far fa-user"></i></a>
+            <a href="/"><i class="far fa-copyright"></i> </a>
+            </a>
+        
+ 
+    </div>
+</body></html>
