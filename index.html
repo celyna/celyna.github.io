@@ -3,7 +3,7 @@
  
 <head>
     <title>NETWORK</title>
-    <link rel="shortcut icon" href="https://66.media.tumblr.com/42405f51763adc1bf270ca2e45d8e898/tumblr_inline_pkaz9aWykm1t78dpp_540.gif">
+    <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <!---
    
@@ -36,8 +36,8 @@
         height:200px;
         background-color:rgba(255, 255, 255, .5) ;
         position:absolute;
-        left:35%;
-        top:40%;
+        left:32%;
+        top:39%;
         text-align:center;
     }
    
@@ -47,54 +47,28 @@
    
     .company {text-transform:uppercase;font-weight:lighter!important;font-size:8px;letter-spacing:2px;padding-top:5px;}
    
-    .links {position:absolute;left:12%;margin-top:20px;width:400px;height:60px;text-transform:uppercase;font-size:8.5px;letter-spacing:1px;text-align:center!important;}
-    .links a {margin-right:10px;}
+    #links {position:absolute;left:12%;margin-top:20px;width:400px;height:60px;text-transform:uppercase;font-size:8.5px;letter-spacing:1px;text-align:center!important;}
+    #links a {margin-right:10px;}
     
-   
-
     
-/* Icon Sink Away */
-@-webkit-keyframes hvr-icon-sink-away {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(1em);
-    transform: translateY(1em);
-  }
-}
-@keyframes hvr-icon-sink-away {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(1em);
-    transform: translateY(1em);
-  }
-}
-/* Icon Sink Away */
-.hvr-icon-sink-away {
+.hvr-icon-spin {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.hvr-icon-sink-away .hvr-icon {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+.hvr-icon-spin .hvr-icon {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
-.hvr-icon-sink-away:hover .hvr-icon, .hvr-icon-sink-away:focus .hvr-icon, .hvr-icon-sink-away:active .hvr-icon {
-  -webkit-animation-name: hvr-icon-sink-away;
-  animation-name: hvr-icon-sink-away;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+.hvr-icon-spin:hover .hvr-icon, .hvr-icon-spin:focus .hvr-icon, .hvr-icon-spin:active .hvr-icon {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
     
 /* HP Bars */
@@ -170,8 +144,8 @@
         <div class="title">Computer Science and Business Applications</div>
         <div class="company">University of California, Riverside</div>
         
-        <div class="links">
-            <a href="https://github.com/celyna" class="hvr-icon-sink-away" ><i class="fab fa-github"></i></a>
+        <div id="links">
+            <a href="https://github.com/celyna" class="hvr-icon-spin" ><i class="fab fa-github"></i></a>
             <a href="mailto:csu018@ucr.edu" title = "email: csu018@ucr.edu"><i class="fa fa-envelope"></i> </a>
             <a href="/"><i class="fab fa-linkedin"></i> </a> 
             <a href="/"><i class="fa fa-crop"></i> </a>
