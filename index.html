@@ -1,143 +1,469 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
- 
+
 <head>
     <title>Celyna Su</title>
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
-
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---
+   
+    esketit
+   
+   
+    ---->
    
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  
 <style type="text/css">
 
-/* BASICS */
-    body {background-color:#f3f3f3;font-family:Lato;color:#000;font-size:11px;font-weight:300; background-image: url("https://i.imgur.com/wnKq9sI.jpg");background-position: bottom;background-position:70% 20%;
-}
-    a {color:#000;text-decoration:none;-webkit-transition-duration:600ms;-o-transition-duration:600ms;-moz-transition-duration:600ms;-ms-transition-duration:600ms;}
-    a:hover, a:active {color:#fff;border-bottom-color:#fff;}
-    b, em {font-weight:bold;color:#94b1cc;}
-    h1 {padding-bottom:1px;margin:0;}
-    .credit {position:absolute;text-transform:uppercase;font-size:10px;font-weight:normal;right:5px;bottom:6px;letter-spacing:1px;}
- 
-   .main {
-        width:520px;
-        height:200px;
-        background-color:rgba(255, 255, 255, .6) ;
-        position:absolute;
-        left:35.3%;
-        top:37%;
+/* Theme Basics */
+    body {
+        height:100%;
+        margin:0;
+        background-image: url("https://i.imgur.com/hHgOxsw.jpg");
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:left bottom;
+        overflow:scroll;
+        background-color:#f1f1f1;
+    }
+
+    a {
+        color:#fff;
+        text-decoration:none;
+        -webkit-transition-duration:600ms;
+        -o-transition-duration:600ms;
+        -moz-transition-duration:600ms;
+        -ms-transition-duration:600ms;
+    }
+    
+        a:hover, a:active {
+            color:#fff;
+        }
+        
+    b {
+        font-weight:bold;
+    }
+    
+    h1 {
+        padding-bottom:1px;
+        margin:0;
+    }
+    
+/* Topbar */
+    .topbar {
+        width:100%;
+        height:40px;
+        background-color:#000 ;
+        position:fixed;
         text-align:center;
+        padding:10px;
+        z-index:9999999999;
+        top:0%;
+    }
+    
+    .topproj{
+        text-transform:lowercase;
+        font-size:14px;
+        letter-spacing:2px;
+        text-align:left;
+        margin-left:15px;
+        color: #fff;
+        font-weight:normal;
+        margin-top:10px;
+        font-family:Didot;
+        z-index:999999;
+    }
+
+    
+    .topslash {
+        text-transform:uppercase;
+        font-size:30px;
+        letter-spacing:3px;
+        color: #fff;
+        font-weight:normal;
+        margin-top:-25px;
+        margin-left:100px;
+        font-family:Didot;
+        z-index:999;
+    }
+    
+/* Centerpieces */
+    .main {
+        background-color:transparent;
+        position:absolute;
+        margin-top:20%;
+        margin-left:43%;
+        text-align:center;
+        
     }
    
-    .name {text-transform:uppercase;font-size:15px;letter-spacing:3px;font-weight:bold;margin-top:35px;font-family:Didot;}
+    .name {
+        text-transform:lowercase;
+        font-size:20px;
+        letter-spacing:2px;
+        font-weight:bold;
+        margin-top:35px;
+        font-family:Didot;
+        
+    }
    
-    .title {font-family:Didot;font-style:italic;padding-top:5px;}
+    .major {
+        font-family:Didot;
+        font-style:italic;
+        font-size:12px;
+        padding-top:5px;
+    }
    
-    .company {text-transform:uppercase;font-weight:lighter!important;font-size:8px;letter-spacing:2px;padding-top:5px;}
-   
-    #links {position:absolute;left:12%;margin-top:20px;width:400px;height:60px;text-transform:uppercase;font-size:9px;letter-spacing:1px;text-align:center!important;}
-    #links a {margin-right:10px;}
+
+/* Home */
+.homepage {
+        height:100%;
+        width:100%;
+        top:5%;
+        left:0%;
+        z-index:999;
+        background-color:transparent;
+        font-family:Lato;
+        position:absolute;
+}
+
+/* Projects */
+
+.projects-bloc {
+        background-color:#eee;
+        opacity:.8;
+        position:absolute;
+        width:100%;
+        height:50%;
+        margin-top:63%;
+        margin-left:0%;
+        text-align:center;
+}
+
+.projects-main {
+        background-color:transparent;
+        position:absolute;
+        margin-left:46%;
+        margin-top:5%;
+        text-align:center;
+    }
     
+.projects-name {
+        text-transform:lowercase;
+        font-size:20px;
+        letter-spacing:2px;
+        font-weight:bold;
+        margin-top:-25%;
+        font-family:Didot;
+    }
     
-.hvr-icon-spin {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+/* About */
+.about-bloc {
+        background-color:#e1e1e1;
+        position:absolute;
+        width:100%;
+        height:32.5%;
+        opacity:0.8;
+        margin-top:91.5%;
+        margin-left:0%;
+        text-align:center;
 }
-.hvr-icon-spin .hvr-icon {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+
+.about-main {
+        background-color:transparent;
+        position:absolute;
+        margin-left:47%;
+        margin-top:0%;
+        text-align:center;
+    }
+    
+.about-name {
+        text-transform:lowercase;
+        font-size:20px;
+        letter-spacing:2px;
+        font-weight:bold;
+        margin-top:35px;
+        font-family:Didot;
+        
+    }
+
+/* Contact */
+.contact-bloc {
+        background-color:#000;
+        position:absolute;
+        width:100%;
+        height:10%;
+        margin-top:110%;
+        margin-left:0%;
+        text-align:center;
 }
-.hvr-icon-spin:hover .hvr-icon, .hvr-icon-spin:focus .hvr-icon, .hvr-icon-spin:active .hvr-icon {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
+
+.contact-main {
+        background-color:transparent;
+        position:absolute;
+        margin-left:46.5%;
+        margin-top:-3%;
+        text-align:center;
+    }
+    
+.contact-links {
+        text-transform:uppercase;
+        letter-spacing:5px;
+        font-weight:bold;
+        margin-top:70%;
+        color:#fff;
+        font-size:20px;
+        font-family:Lato;
+    }
+
+.contact-copyright{
+        text-transform:uppercase;
+        letter-spacing:1px;
+        margin-top:-20%;
+        color:#fff;
+        font-size:7px;
+        font-family:Lato;
 }
+
+/* Spesho Effects */
+
+    .hvr-icon-spin {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+    
+    .hvr-icon-spin .hvr-icon {
+        -webkit-transition-duration: 1s;
+        transition-duration: 1s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+    
+        .hvr-icon-spin:hover .hvr-icon, .hvr-icon-spin:focus .hvr-icon,           .hvr-icon-spin:active .hvr-icon {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
     
 /* HP Bars */
 
-    .sleep {position:absolute;vertical-align:bottom;text-transform:uppercase;top:75%;left:10%;background-color:#000;width:60px;height:1px;z-index:9999999999;-webkit-transition: 2s ease-out;
-  -moz-transition: 2s ease-out;
-  -o-transition: 2s ease-out;
-  transition: 2s ease-out;}
-    .sleep:hover {width:180px; -webkit-transition: 2s ease-out;
-  -moz-transition: 2s ease-out;
-  -o-transition: 2s ease-out;
-  transition: 2s ease-out;}
+    .sleep {
+        position:absolute;
+        vertical-align:bottom;
+        background-color:#000;
+        width:60px;
+        margin-left:-50%; margin-top:20%;
+        height:1px;
+        z-index:9999999999;
+        -webkit-transition: 2s ease-out;
+        -moz-transition: 2s ease-out;
+        -o-transition: 2s ease-out;
+        transition: 2s ease-out;
+    }
     
-    .totsleep {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:75%;left:10%;background-color:#bbb;width:180px;height:1px;z-index:99999999;}
+        .sleep:hover {
+            width:180px; 
+            -webkit-transition: 2s ease-out;
+            -moz-transition: 2s ease-out;
+            -o-transition: 2s ease-out;
+            transition: 2s ease-out;
+        }
     
-    .deets {position:absolute;left:10%;top:41.5%;margin-top:70px;width:100px;height:50px;vertical-align:bottom;text-transform:uppercase;font-size:7px;letter-spacing:1px;text-align:left!important;z-index:999999999;}
+    .totsleep {
+        position:absolute;
+        vertical-align:bottom;
+        background-color:#b8b8b8;
+        width:180px;
+        margin-left:-50%; margin-top:20%;
+        height:1px;
+        z-index:99999999;
+    }
+    
+    .details {
+        position:absolute;
+        margin-left:-50%; margin-top:14%;
+        width:100px;
+        height:50px;
+        vertical-align:bottom;
+        text-transform:uppercase;
+        font-size:7px;
+        letter-spacing:1px;
+        text-align:left!important;
+        z-index:999999999;
+    }
    
-    .deets a {display:block;margin-top:7px;}
+        .details a {
+            display:block;
+            margin-top:7px;
+        }
     
-    .programming {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:75%;left:54%;background-color:#000;width:150px;height:1px;z-index:9999999999;-webkit-transition: 1s ease-out;
-  -moz-transition: 1s ease-out;
-  -o-transition: 1s ease-out;
-  transition: 1s ease-out;}
-    .programming:hover {width:180px; -webkit-transition: 1s ease-out;
-  -moz-transition: 1s ease-out;
-  -o-transition: 1s ease-out;
-  transition: 1s ease-out;}
+    .programming {
+        position:absolute;
+        margin-left:58%; margin-top:20%;
+        vertical-align:bottom;
+        text-transform:uppercase;
+        background-color:#000;
+        width:150px;
+        height:1px;
+        z-index:9999999999;
+        -webkit-transition: 1s ease-out;
+        -moz-transition: 1s ease-out;
+        -o-transition: 1s ease-out;
+        transition: 1s ease-out;
+    }
     
-    .totprogram {position:absolute;bottom:10px;vertical-align:bottom;text-transform:uppercase;top:75%;left:54%;background-color:#bbb;width:180px;height:1px;z-index:99999999;}
+        .programming:hover {
+            width:180px; 
+            -webkit-transition: 1s ease-out;
+            -moz-transition: 1s ease-out;
+            -o-transition: 1s ease-out;
+            transition: 1s ease-out;
+        }
     
-    .deets1 {position:absolute;left:54%;top:41.5%;margin-top:70px;width:100px;height:50px;vertical-align:bottom;text-transform:uppercase;font-size:7px;letter-spacing:1px;text-align:left!important;z-index:999999999;}
+    .totprogram {
+        position:absolute;
+        margin-left:58%; margin-top:20%;
+        vertical-align:bottom;
+        text-transform:uppercase;
+        background-color:#b8b8b8;
+        width:180px;
+        height:1px;
+        z-index:99999999;
+    }
+    
+    .details1 {
+        position:absolute;
+        margin-left:58%; margin-top:14%;
+        width:100px;
+        height:50px;
+        vertical-align:bottom;
+        text-transform:uppercase;
+        font-size:7px;
+        letter-spacing:1px;
+        text-align:left!important;
+        z-index:999999999;
+    }
    
-    .deets1 a {display:block;margin-top:7px;}
-    
-/* Tooltip */
- 
-.ui-tooltip {  
-    position:absolute;
-    z-index:999999999;
-    padding-top:15px;
-}
- 
-.ui-tooltip-content {
-    background:#ffffff;
-    padding:2px 5px;
-    font-family:Lato;
-    border:1px solid #eeeeee;
-    font-size:8px;
-    letter-spacing:1px;
-    text-transform:uppercase;
+        .details1 a {
+            display:
+            block;
+            margin-top:7px;
+        }
+
+/* Highlight */
+
+::selection {color: #101010;}
+::-moz-selection {color: #101010;}
+
+.rightclickz {
+    position:fixed;
+    left:33%;
+    top:38%;
+    width:520px;
+    height:200px;
+    background-color:#fff;
+    visibility: hidden;
+    z-index:999999999999999;
+    -webkit-animation: slide 6s ease-in-out;
+    -webkit-transition: 6s ease-out;
+    -moz-transition: 6s ease-out;
+    -o-transition: 6s ease-out;
+    transition: 6s ease-out;
+    animation-iteration-count: 1;
+    overflow:hidden;
 }
 
- 
+@-webkit-keyframes slide {
+   0%  {width:0px;right:90%;}
+  100% {width:520px;}
+  
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
 </style>
+
 </head>
 <body>
+<!---- Topbar HTML ---->
+<div class="topbar">
+    <div class="topproj"><a href="#">home / </a><a href="#projects">projects</a> / <a href="/resume.pdf">resume</a>  / <a href="#about">about</a> / <a href="#contact">contact</a></div> 
+    
+    
+</div>
 
-
+<!----------- HOME PAGE -----------> 
+<div class="homepage">
     <div class="main">
-   <div class="deets">Sleep (in progress)</div>
-<div class="sleep"></div>
-<div class="totsleep"></div>
 
-<div class="deets1">Programming</div>
-<div class="programming"></div>
-<div class="totprogram"></div>
-        <div class="name">Celyna Cara Su</div>
-        <div class="title">Computer Science and Business Applications</div>
-        <div class="company">University of California, Riverside</div>
+    <!---- Centerpiece HTML ----->
+    <div class="name">Celyna Cara Su</div>
+    <div class="major">Developer & Photography Enthusiast </div>
+    
+
+    <!---- HP Bars HTML ----->
+    <div class="details">Sleep (in progress)</div>
+    <div class="sleep"></div>
+    <div class="totsleep"></div>
+
+    <div class="details1">Programming</div>
+    <div class="programming"></div>
+    <div class="totprogram"></div>
+    
+    </div>
+    </div>
+ 
+<!----------- PROJECTS ----------->    
+
+<div class="projects-bloc" id="projects">
+    <div class="projects-main">
+        <div class="projects-name">projects</div>
         
-        <div id="links">
-            <a href="https://github.com/celyna" class="hvr-icon-spin" ><i class="fab fa-github"></i></a>
+    </div>
+    
+</div>
+
+<!----------- ABOUT ----------->    
+
+<div class="about-bloc" id="about">
+    <div class="about-main">
+        <div class="about-name">about</div>
+        
+    </div>
+    
+</div>
+
+<!----------- CONTACT ----------->    
+
+<div class="contact-bloc" id="contact">
+    <div class="contact-main">
+        <div class ="contact-links">
+            <a href="https://github.com/celyna" ><i class="fab fa-github"></i> </a>
             <a href="mailto:csu018@ucr.edu" title = "email: csu018@ucr.edu"><i class="fa fa-envelope"></i> </a>
-            <a href="https://www.linkedin.com/in/celyna"><i class="fab fa-linkedin"></i> </a> 
-            <a href="https://drive.google.com/drive/folders/1ciWH0sBob91n6gQAw89aOa_pC8V8SkDB?usp=sharing"><i class="fa fa-crop"></i> </a>
-            <a href="celyna.pdf"><i class="far fa-user"></i></a>
-            <a href="/" title="image credit: @yk on instagram"><i class="far fa-copyright"></i> </a>
+            <a href="https://www.linkedin.com/in/celyna"><i class="fab fa-linkedin"></i></a> <br> <br>
+            </div>
+           <div class="contact-copyright">2019 <i class="far fa-copyright"></i> Celyna Su </a>
             </a>
         
  
     </div>
+        
+    </div>
+    
+</div>
+    
+    
 </body></html>
