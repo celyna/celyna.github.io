@@ -320,37 +320,15 @@
         font-family:Lato;
 }
 
-/* Spesho Effects */
-
-    .hvr-icon-spin {
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    }
-    
-    .hvr-icon-spin .hvr-icon {
-        -webkit-transition-duration: 1s;
-        transition-duration: 1s;
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-    }
-    
-        .hvr-icon-spin:hover .hvr-icon, .hvr-icon-spin:focus .hvr-icon,           .hvr-icon-spin:active .hvr-icon {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
     
 /* HP Bars */
+
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
-  .sleep {
+@media only screen and (min-width: 401px) {
+    .sleep {
         position:absolute;
         vertical-align:bottom;
-        background-color:transparent;
+        background-color:#000;
         width:60px;
         margin-left:-50%; margin-top:20%;
         height:1px;
@@ -372,7 +350,7 @@
     .totsleep {
         position:absolute;
         vertical-align:bottom;
-        background-color:transparent;
+        background-color:#b8b8b8;
         width:180px;
         margin-left:-50%; margin-top:20%;
         height:1px;
@@ -383,11 +361,10 @@
         position:absolute;
         margin-left:-50%; margin-top:14%;
         width:100px;
-        color:transparent;
         height:50px;
         vertical-align:bottom;
         text-transform:uppercase;
-        font-size:0px;
+        font-size:7px;
         letter-spacing:1px;
         text-align:left!important;
         z-index:999999999;
@@ -403,7 +380,7 @@
         margin-left:58%; margin-top:20%;
         vertical-align:bottom;
         text-transform:uppercase;
-        background-color:transparent;
+        background-color:#000;
         width:150px;
         height:1px;
         z-index:9999999999;
@@ -426,7 +403,7 @@
         margin-left:58%; margin-top:20%;
         vertical-align:bottom;
         text-transform:uppercase;
-        background-color:transparent;
+        background-color:#b8b8b8;
         width:180px;
         height:1px;
         z-index:99999999;
@@ -436,7 +413,6 @@
         position:absolute;
         margin-left:58%; margin-top:14%;
         width:100px;
-        color:transparent;
         height:50px;
         vertical-align:bottom;
         text-transform:uppercase;
@@ -453,34 +429,22 @@
         }
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 1220px) {
+@media only screen and (max-width: 400px) {
    .sleep {
         position:absolute;
         vertical-align:bottom;
-        background-color:#000;
+        background-color:transparent;
         width:60px;
         margin-left:-50%; margin-top:20%;
         height:1px;
         z-index:9999999999;
-        -webkit-transition: 2s ease-out;
-        -moz-transition: 2s ease-out;
-        -o-transition: 2s ease-out;
-        transition: 2s ease-out;
     }
     
-        .sleep:hover {
-            width:180px; 
-            -webkit-transition: 2s ease-out;
-            -moz-transition: 2s ease-out;
-            -o-transition: 2s ease-out;
-            transition: 2s ease-out;
-        }
     
     .totsleep {
         position:absolute;
         vertical-align:bottom;
-        background-color:#b8b8b8;
+        background-color:transparent;
         width:180px;
         margin-left:-50%; margin-top:20%;
         height:1px;
@@ -494,46 +458,30 @@
         height:50px;
         vertical-align:bottom;
         text-transform:uppercase;
-        font-size:7px;
+        font-size:0px;
         letter-spacing:1px;
         text-align:left!important;
         z-index:999999999;
     }
    
-        .details a {
-            display:block;
-            margin-top:7px;
-        }
-    
     .programming {
         position:absolute;
         margin-left:58%; margin-top:20%;
         vertical-align:bottom;
         text-transform:uppercase;
-        background-color:#000;
+        background-color:transparent;
         width:150px;
         height:1px;
         z-index:9999999999;
-        -webkit-transition: 1s ease-out;
-        -moz-transition: 1s ease-out;
-        -o-transition: 1s ease-out;
-        transition: 1s ease-out;
     }
     
-        .programming:hover {
-            width:180px; 
-            -webkit-transition: 1s ease-out;
-            -moz-transition: 1s ease-out;
-            -o-transition: 1s ease-out;
-            transition: 1s ease-out;
-        }
     
     .totprogram {
         position:absolute;
         margin-left:58%; margin-top:20%;
         vertical-align:bottom;
         text-transform:uppercase;
-        background-color:#b8b8b8;
+        background-color:transparent;
         width:180px;
         height:1px;
         z-index:99999999;
@@ -546,18 +494,11 @@
         height:50px;
         vertical-align:bottom;
         text-transform:uppercase;
-        font-size:7px;
+        font-size:0px;
         letter-spacing:1px;
         text-align:left!important;
         z-index:999999999;
     }
-   
-        .details1 a {
-            display:
-            block;
-            margin-top:7px;
-        }
-        
 }
 
 </style>
