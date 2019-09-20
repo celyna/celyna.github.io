@@ -103,9 +103,9 @@
     .main {
         background-color:transparent;
         position:absolute;
-        margin-top:20%;
-        left:50%;
-        text-align:left;
+        margin-top:10%;
+        margin-left:14%;
+        text-align:center;
         
     }
    
@@ -170,23 +170,23 @@
 /* Projects */
 
 /* Tablet Styles */
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 401px) and (max-width: 960px) {
  .projects-bloc {
-        background-color:transparent;
+        background-color:#eee;
         opacity:.8;
         position:absolute;
-        width:100%;
-        height:50%;
-        margin-top:100%;
-        margin-left:-6%;
+        width:50%;
+        height:100%;
+        margin-top:0%;
+        margin-left:50%;
         text-align:center;
 }
 
 .projects-main {
         background-color:transparent;
         position:absolute;
-        margin-left:46%;
-        margin-top:5%;
+        margin-left:40%;
+        margin-top:25%;
         text-align:center;
     }
     
@@ -235,22 +235,23 @@
 
 /* About */
 @media only screen and (max-width: 960px) {
-    .about-bloc {
-        background-color:transparent;
+.about-bloc {
+        background-color:#e1e1e1;
         position:absolute;
-        width:100%;
-        height:32.5%;
+        width:50%;
+        height:100%;
         opacity:0.8;
-        margin-top:120%;
-        margin-left:-4%;
+        margin-top:0%;
+        margin-left:100%;
         text-align:center;
+        z-index:9999999;
 }
 
 .about-main {
         background-color:transparent;
         position:absolute;
         margin-left:47%;
-        margin-top:0%;
+        margin-top:10%;
         text-align:center;
     }
     
@@ -301,11 +302,11 @@
 @media only screen and (max-width: 960px) {
   .contact-bloc {
         background-color:transparent;
-        position:absolute;
+        position:fixed;
         width:100%;
         height:10%;
-        margin-top:180%;
-        margin-left:-8%;
+        margin-top:80%;
+        margin-left:-27%;
         text-align:center;
 }
 
@@ -327,9 +328,6 @@
         color:#000;
         font-size:20px;
         font-family:Lato;
-    }
-.contact-links a {
-        color: #fff;
     }
 
 .contact-copyright{
@@ -571,7 +569,7 @@
 <body>
 <!---- Topbar HTML ---->
 <div class="topbar">
-    <div class="topproj"><a href="#">home</a> / <a href="#projects">projects</a> / <a href="/resume.pdf">resume</a>  / <a href="#about">about</a> / <a href="#contact">contact</a></div> 
+    <div class="topproj"><a href="#">home / </a><a href="#projects">projects</a> / <a href="/resume.pdf">resume</a>  / <a href="#about">about</a> / <a href="#contact">contact</a></div> 
     
     
 </div>
@@ -635,7 +633,3 @@
     </div>
     
 </div>
-
-
-    
-</body></html>
