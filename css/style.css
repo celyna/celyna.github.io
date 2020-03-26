@@ -112,46 +112,46 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: #41228e;
-  color: #fff;
+  background: #303030;
+  color: #242422;
 }
 
 .btn-primary:active {
-  background: #542cb7 !important;
+  background: #303030 !important;
 }
 
 .btn-primary:hover {
-  background: #542cb7;
+  background: #303030;
 }
 
 .btn-primary.focus, .btn-primary.active {
-  background: #542cb7 !important;
+  background: #303030 !important;
   box-shadow: none !important;
 }
 
 .btn-transparent {
   background: transparent;
-  color: #41228e;
+  color: #383838;
   font-weight: bold;
 }
 
 .btn-transparent:active, .btn-transparent:hover {
-  color: #41228e;
+  color: #303030;
 }
 
 body {
-  background-color: #fff;
+  background-color:#242422;
   overflow-x: hidden;
 }
 
 ::-moz-selection {
   background: #542cb7;
-  color: #fff;
+  color: #242422;
 }
 
 ::selection {
   background: #542cb7;
-  color: #fff;
+  color:#242422;
 }
 
 /* preloader */
@@ -161,7 +161,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: #242422;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -199,11 +199,11 @@ select:focus {
 }
 
 a.text-dark:hover {
-  color: #41228e !important;
+  color: #303030 !important;
 }
 
 a:hover {
-  color: #41228e;
+  color: #303030;
 }
 
 .slick-slide {
@@ -251,7 +251,7 @@ a:hover {
 }
 
 .bg-primary {
-  background: #41228e !important;
+  background: #303030 !important;
 }
 
 .bg-gray {
@@ -259,7 +259,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #41228e !important;
+  color: #303030 !important;
 }
 
 .text-color {
@@ -371,7 +371,7 @@ a:hover {
 }
 
 .slick-dots li.slick-active button {
-  background: #fff;
+  background:#242422;
   width: 25px;
 }
 
@@ -396,7 +396,7 @@ a:hover {
 }
 
 .form-control:focus {
-  border-color: #41228e;
+  border-color: #303030;
   outline: 0;
   box-shadow: none !important;
 }
@@ -426,7 +426,7 @@ textarea.form-control {
 }
 
 .navigation.nav-bg {
-  background-color: #41228e;
+  background-color: #303030;
   padding: 15px 100px;
 }
 
@@ -439,7 +439,7 @@ textarea.form-control {
 @media (max-width: 991px) {
   .navigation {
     padding: 20px;
-    background: #41228e;
+    background: #303030;
   }
 }
 
@@ -454,7 +454,7 @@ textarea.form-control {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+  color:#242422;
 }
 
 .hero-area {
@@ -606,20 +606,20 @@ textarea.form-control {
 }
 
 .hover-bg-primary:hover {
-  background: #41228e;
+  background: #303030;
 }
 
 .hover-bg-primary:hover * {
-  color: #fff;
+  color: #242422;
 }
 
 .active-bg-primary {
   transition: .3s ease;
-  background: #41228e;
+  background: #303030;
 }
 
 .active-bg-primary * {
-  color: #fff;
+  color: #242422;
 }
 
 .hover-shadow {
@@ -766,7 +766,7 @@ blockquote {
   display: inline-block;
   padding: 10px 20px;
   background: #eaeaea;
-  border-left: 2px solid #41228e;
+  border-left: 2px solid #303030;
   font-style: italic;
   font-size: 22px;
 }
