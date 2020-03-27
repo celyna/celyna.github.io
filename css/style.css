@@ -145,13 +145,15 @@ body {
 }
 
 ::-moz-selection {
-  background: #542cb7;
-  color: #242422;
+  background: #242422;
+  color: #fff;
+  opacity:0.5;
 }
 
 ::selection {
-  background: #542cb7;
-  color:#242422;
+  background: #242422;
+  color: #fff;
+  opacity:0.5;
 }
 
 /* preloader */
@@ -183,12 +185,14 @@ a,
 a:hover,
 a:focus {
   text-decoration: none;
+  color: #303030;
 }
 
 a,
 button,
 select {
   cursor: pointer;
+  color: #303030;
   transition: .2s ease;
 }
 
