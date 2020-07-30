@@ -454,7 +454,7 @@ textarea.form-control {
 
 .navbar .nav-item .nav-link {
   font-family: "Poppins";
-  text-transform: uppercase;
+  text-transform: lowercase;
   padding: 15px;
 }
 
