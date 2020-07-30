@@ -320,7 +320,8 @@ a:hover {
 }
 
 .md-30 {
-  padding-top: 50px !important;
+  padding-top: 50px; !important
+  margin-right: 30px;
 }
 
 .zindex-1 {
