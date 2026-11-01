@@ -1,2 +1,2 @@
 # celynasu
-personal portfolio project
+personal portfolio project (outdated)
